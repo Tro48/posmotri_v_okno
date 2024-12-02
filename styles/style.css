@@ -74,7 +74,7 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 399px;
+  min-width: 399px;
 }
 
 .button {
@@ -222,8 +222,7 @@ ol {
 
 .content__list {
   position: relative;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: auto;
   height: 298px;
 }
 
@@ -239,6 +238,11 @@ ol {
 .content__card-link {
   display: block;
   text-decoration: none;
+}
+
+.content__card-link:active,
+.button:active {
+  background-color: #545050;
 }
 
 .content__card-link_current {
@@ -293,8 +297,4 @@ ol {
   white-space: nowrap;
   max-width: 399px;
   padding: 6px 147px;
-}
-
-.button:active {
-  background-color: #545050;
 }
